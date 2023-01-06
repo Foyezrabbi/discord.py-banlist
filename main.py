@@ -13,6 +13,5 @@ async def banlist(ctx):
           for ban_entry in ban_list:
               ban_list_string += f"{ban_entry.user.name}#{ban_entry.user.discriminator}\n"
           await ctx.send(f"Here is a list of banned users in this server:\n{ban_list_string}")
-    except Exception as e:
-      print(e)
+    except Exception:
       await ctx.send(f"Here is a list of banned users in this server:")
